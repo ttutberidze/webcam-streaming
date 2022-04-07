@@ -3,15 +3,13 @@ version: '1'
 services:
   backend:
     build:
-      context: ./
-      dockerfile: ./DockerfileServer
-    image: "dmurphy1217/twitter-sentiment-backend"
+      context: ./backend
+      dockerfile: ./Dockerfile
     ports:
       - "4000:4000"
   frontend:
     build:
-      context: ./
-      dockerfile: ./DockerfileClient
-    image: "dmurphy1217/twitter-sentiment-frontend"
+      context: ./frontend
+      dockerfile: ./Dockerfile
     ports:
       - "3000:3000"
